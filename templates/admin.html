@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% for item in tranlist %}
+<div>
+	<p>Name: {{ item["author"] }} </p>
+	<p>File 1: {{ item["content"] }} </p>
+	<p>File 2: {{ item["content2"] }} </p>
+	<hr>
+</div>
+{% endfor %}
+
+
+{% if tranlist|length %}
+<a href="{{node_address}}/mine" target="_blank"><button>Mine</button></a>
+<a href="/admin"><button>Resync</button></a>
+{% endif %}
+
+<a href="/chain"><button>View Chain</button></a>
+
+{% endblock %}
