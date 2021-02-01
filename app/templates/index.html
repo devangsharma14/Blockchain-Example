@@ -1,0 +1,16 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+	<br>
+
+	<center>
+	<form action="/submit" id="textform" method="post">
+	    <input type="file" name="content">
+	    <input type="file" name="content2">
+	    <input type="text" name="author" placeholder="Startup name">
+	    <input type="submit" value="Upload">
+	</form>
+	</center>
+
+{% endblock %}
